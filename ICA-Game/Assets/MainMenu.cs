@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // following tutorial from https://www.youtube.com/watch?v=RsgiYqLID-U
+    // following tutorial from https://www.youtube.com/watch?v=RsgiYqLID-U 
     // button quits game
     public void QuitButton()
     {
@@ -16,5 +16,10 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
