@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     //button starts first scene
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level_1");
     }
 
     public void MainMenuButton()
