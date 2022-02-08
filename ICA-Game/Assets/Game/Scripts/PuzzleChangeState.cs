@@ -30,19 +30,21 @@ public class PuzzleChangeState : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("Enter");
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Enter");
+            Debug.Log("Player Enter");
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
+        Debug.Log("Exit");
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Exit");
+            Debug.Log("Player Exit");
         }
     }
 }
