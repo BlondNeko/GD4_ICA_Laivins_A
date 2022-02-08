@@ -15,11 +15,12 @@ public class MainMenu : MonoBehaviour
     //button starts first scene
     public void StartGame()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Game");
+        SceneManager.UnloadSceneAsync("MainMenu");
     }
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }

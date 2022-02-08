@@ -20,6 +20,9 @@ public class ChangeMat : MonoBehaviour
 
     public Material material;
     public Renderer renderer;
+    public bool level1 = false;
+    public bool lastLevel = false;
+    public String unloadLevel;
     public String nextLevel;
 
     public void Swap()
@@ -28,6 +31,14 @@ public class ChangeMat : MonoBehaviour
         renderer.enabled = true;
         renderer.sharedMaterial = material;
 
+        if (!level1)
+        {
+            SceneManager.UnloadSceneAsync(unloadLevel);
+        }
+        else if (lastLevel)
+        {
+            SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+        }
         SceneManager.LoadScene(nextLevel, LoadSceneMode.Additive);
     }
 }
