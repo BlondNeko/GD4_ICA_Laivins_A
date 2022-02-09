@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class PuzzleChangeState : MonoBehaviour
 {
+    //following https://www.youtube.com/watch?v=cLzG1HDcM4s
+
     public bool isInRange = false;
     public KeyCode interactKey;
     public UnityEvent interactAction;
