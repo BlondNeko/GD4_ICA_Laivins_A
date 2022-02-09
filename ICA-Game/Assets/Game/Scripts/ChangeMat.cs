@@ -34,17 +34,18 @@ public class ChangeMat : MonoBehaviour
         renderer.enabled = true;
         renderer.sharedMaterial = material;
 
-        if (levelKey)
+        if (levelKey&&!lastLevel)
         {
+
             if (!level1)
             {
                 SceneManager.UnloadSceneAsync(unloadLevel);
             }
-            else if (lastLevel)
-            {
-                SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
-            }
             SceneManager.LoadScene(nextLevel, LoadSceneMode.Additive);
+        }
+        else if(lastLevel)
+        {
+            SceneManager.LoadSceneAsync("EndScene");
         }
     }
 }
