@@ -30,6 +30,11 @@ public class PuzzleChangeState : MonoBehaviour
         }
     }
 
+    public void DestroyItem()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         Debug.Log("Enter");

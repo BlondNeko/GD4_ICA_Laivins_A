@@ -10,10 +10,4 @@ public class Start1 : MonoBehaviour
     {
         SceneManager.LoadScene("Level_1", LoadSceneMode.Additive);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
