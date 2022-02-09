@@ -13,10 +13,8 @@ public class PuzzleChangeState : MonoBehaviour
     public UnityEvent interactAction;
 
 
-
     void Start()
     {
-
     }
 
     void Update()
@@ -37,21 +35,22 @@ public class PuzzleChangeState : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Enter");
+        //Debug.Log("Enter");
         if (collision.gameObject.CompareTag("Player"))
         {
+
             isInRange = true;
-            Debug.Log("Player Enter");
+            //Debug.Log("Player Enter");
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        Debug.Log("Exit");
+        //Debug.Log("Exit");
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            Debug.Log("Player Exit");
+            //Debug.Log("Player Exit");
         }
     }
 }

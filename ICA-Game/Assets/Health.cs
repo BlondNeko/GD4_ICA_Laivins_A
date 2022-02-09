@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+
     private int health;
     // Start is called before the first frame update
     void Start()
